@@ -1,0 +1,568 @@
+<scoverage 
+statement-count="157" statements-invoked="86" statement-rate="54.78" branch-rate="100.00" version="1.0" timestamp="1531980587386">
+    <packages>
+        <package name="handledatatype" statement-count="18" statements-invoked="18" statement-rate="100.00">
+            <classes>
+                <class 
+                name="handledatatype.DataType" filename="handledatatype/DataType.scala" statement-count="18" statements-invoked="18" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="handledatatype/DataType/returnType" statement-count="18" statements-invoked="18" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="472" end="482" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="348" end="349" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="380" end="403" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="182" end="207" line="7" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="257" end="272" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="378" end="421" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="404" end="419" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="273" end="274" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="483" end="484" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="309" end="330" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="307" end="349" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="130" end="160" line="6" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="449" end="484" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="331" end="347" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="238" end="256" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="420" end="421" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="451" end="471" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="handledatatype" class="DataType" class-type="Class" full-class-name="handledatatype.DataType" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/handledatatype/DataType.scala" method="returnType" start="236" end="274" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+        <package name="patternmatch" statement-count="26" statements-invoked="24" statement-rate="92.31">
+            <classes>
+                <class 
+                name="patternmatch.ProblemFirst" filename="patternmatch/ProblemFirst.scala" statement-count="26" statements-invoked="24" statement-rate="92.31" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="patternmatch/ProblemFirst/findLength" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findLength" start="305" end="325" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findLength" start="289" end="290" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="patternmatch/ProblemFirst/tailNth" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="tailNth" start="524" end="533" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="tailNth" start="554" end="581" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="tailNth" start="517" end="522" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="tailNth" start="571" end="580" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="tailNth" start="506" end="515" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="tailNth" start="498" end="534" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="patternmatch/ProblemFirst/findMax" statement-count="9" statements-invoked="8" statement-rate="88.89" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMax" start="171" end="188" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMax" start="197" end="210" line="8" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMax" start="146" end="158" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMax" start="175" end="188" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMax" start="197" end="210" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMax" start="109" end="117" line="7" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMax" start="167" end="210" line="8" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMax" start="160" end="161" line="8" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMax" start="190" end="191" line="8" branch="true" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="patternmatch/ProblemFirst/findMin" statement-count="9" statements-invoked="8" statement-rate="88.89" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMin" start="733" end="734" line="35" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMin" start="710" end="753" line="35" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMin" start="703" end="704" line="35" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMin" start="714" end="731" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMin" start="740" end="753" line="35" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMin" start="689" end="701" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMin" start="652" end="660" line="34" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMin" start="718" end="731" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="patternmatch" class="ProblemFirst" class-type="Class" full-class-name="patternmatch.ProblemFirst" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/patternmatch/ProblemFirst.scala" method="findMin" start="740" end="753" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+        <package name="studentresult" statement-count="113" statements-invoked="44" statement-rate="38.94">
+            <classes>
+                <class 
+                name="studentresult.StudentResult" filename="studentresult/StudentResult.scala" statement-count="111" statements-invoked="42" statement-rate="37.84" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="studentresult/StudentResult/subject1Topper" statement-count="15" statements-invoked="15" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1933" end="1963" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1732" end="1786" line="50" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="2022" end="2046" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1878" end="2101" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1819" end="1873" line="51" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1905" end="1931" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1996" end="2020" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1757" end="1780" line="50" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1841" end="1867" line="51" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="2074" end="2100" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="2048" end="2072" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1849" end="1867" line="51" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1879" end="1903" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1965" end="1994" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject1Topper" start="1770" end="1780" line="50" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="studentresult/StudentResult/subject3Topper" statement-count="15" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="2919" end="2973" line="63" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="2978" end="3201" line="64" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="3033" end="3063" line="64" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="3122" end="3146" line="64" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="2832" end="2886" line="62" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="2857" end="2880" line="62" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="3096" end="3120" line="64" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="3174" end="3200" line="64" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="2941" end="2967" line="63" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="3005" end="3031" line="64" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="2870" end="2880" line="62" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="3065" end="3094" line="64" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="2949" end="2967" line="63" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="3148" end="3172" line="64" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject3Topper" start="2979" end="3003" line="64" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="studentresult/StudentResult/&lt;none&gt;" statement-count="8" statements-invoked="8" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="&lt;none&gt;" start="786" end="896" line="31" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="&lt;none&gt;" start="1027" end="1060" line="40" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="&lt;none&gt;" start="796" end="824" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="&lt;none&gt;" start="864" end="892" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="&lt;none&gt;" start="988" end="1021" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="&lt;none&gt;" start="939" end="1064" line="37" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="&lt;none&gt;" start="830" end="858" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="&lt;none&gt;" start="949" end="982" line="38" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="studentresult/StudentResult/topThreeStudents" statement-count="20" statements-invoked="19" statement-rate="95.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1344" end="1371" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1502" end="1509" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1389" end="1393" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1537" end="1549" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1399" end="1551" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1234" end="1281" line="44" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1464" end="1481" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1207" end="1232" line="44" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1319" end="1394" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1492" end="1492" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1359" end="1371" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1428" end="1428" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1522" end="1535" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1382" end="1383" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1379" end="1380" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1511" end="1520" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1388" end="1388" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1501" end="1550" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1199" end="1282" line="44" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="topThreeStudents" start="1442" end="1487" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="studentresult/StudentResult/subject2Topper" statement-count="15" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2282" end="2336" line="56" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2572" end="2596" line="58" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2369" end="2423" line="57" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2428" end="2651" line="58" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2483" end="2513" line="58" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2546" end="2570" line="58" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2307" end="2330" line="56" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2391" end="2417" line="57" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2624" end="2650" line="58" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2455" end="2481" line="58" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2429" end="2453" line="58" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2320" end="2330" line="56" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2515" end="2544" line="58" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2399" end="2417" line="57" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="subject2Topper" start="2598" end="2622" line="58" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="studentresult/StudentResult/displayFullMarksheet" statement-count="38" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3649" end="3671" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3805" end="3809" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3881" end="3907" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3552" end="3556" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3570" end="3589" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3331" end="3386" line="68" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3695" end="3711" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3814" end="3828" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3644" end="3648" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3507" end="3524" line="70" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3829" end="3853" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3756" end="3760" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3413" end="3459" line="69" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3599" end="3619" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3537" end="3543" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3620" end="3643" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3765" end="3779" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3908" end="3912" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3679" end="3692" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3590" end="3594" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3535" end="3912" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3763" end="3809" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3365" end="3385" line="68" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3780" end="3804" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3861" end="3912" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3561" end="3569" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3597" end="3676" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3339" end="3363" line="68" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3559" end="3594" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3854" end="3858" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3716" end="3730" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3436" end="3453" line="69" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3714" end="3760" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3485" end="3530" line="70" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3863" end="3880" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3672" end="3676" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3812" end="3858" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="StudentResult" class-type="Class" full-class-name="studentresult.StudentResult" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="displayFullMarksheet" start="3731" end="3755" line="71" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="studentresult.ScoreCard" filename="studentresult/StudentResult.scala" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="studentresult/ScoreCard/apply" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="studentresult" class="ScoreCard" class-type="Object" full-class-name="studentresult.ScoreCard" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="apply" start="656" end="715" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="studentresult" class="ScoreCard" class-type="Object" full-class-name="studentresult.ScoreCard" source="/home/knoldus/Downloads/Assignment(19-Jul-2018)/src/main/scala/studentresult/StudentResult.scala" method="apply" start="621" end="651" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

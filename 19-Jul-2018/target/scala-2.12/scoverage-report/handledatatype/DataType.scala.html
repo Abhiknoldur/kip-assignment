@@ -1,0 +1,433 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          handledatatype/DataType.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package handledatatype
+</span>2 <span style=''>
+</span>3 <span style=''>class DataType {
+</span>4 <span style=''>  def returnType(variable: Any): String = {
+</span>5 <span style=''>    variable match {
+</span>6 <span style=''>      case s: String =&gt; </span><span style='background: #AEF1AE'>s&quot;You gave me this string: $s&quot;</span><span style=''>
+</span>7 <span style=''>      case i: Int =&gt; </span><span style='background: #AEF1AE'>s&quot;thanks for the int: $i&quot;</span><span style=''>
+</span>8 <span style=''>      case a: Array[Int] =&gt; </span><span style='background: #AEF1AE'>s&quot;an array of int :${a.mkString(&quot;,&quot;)}&quot;</span><span style=''>
+</span>9 <span style=''>      case as: Array[String] =&gt; </span><span style='background: #AEF1AE'>s&quot;an array of String :${as.mkString(&quot;,&quot;)}&quot;</span><span style=''>
+</span>10 <span style=''>      case list: List[_] =&gt; </span><span style='background: #AEF1AE'>s&quot;thanks for the  List: ${list.toString()}&quot;</span><span style=''>
+</span>11 <span style=''>      case m: Map[_, _] =&gt; </span><span style='background: #AEF1AE'>s&quot;thanks for the map ${m.toString}&quot;</span><span style=''>
+</span>12 <span style=''>    }
+</span>13 <span style=''>  }
+</span>14 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          6
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          130
+          -
+          160
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;You gave me this string: &quot;, &quot;&quot;).s(s)
+        </td>
+      </tr><tr>
+        <td>
+          7
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          182
+          -
+          207
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;thanks for the int: &quot;, &quot;&quot;).s(i)
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          257
+          -
+          272
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.TraversableOnce.mkString
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intArrayOps(a).mkString(&quot;,&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          273
+          -
+          274
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;&quot;
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          238
+          -
+          256
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;an array of int :&quot;
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          236
+          -
+          274
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;an array of int :&quot;, &quot;&quot;).s(scala.Predef.intArrayOps(a).mkString(&quot;,&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          348
+          -
+          349
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;&quot;
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          309
+          -
+          330
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;an array of String :&quot;
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          307
+          -
+          349
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;an array of String :&quot;, &quot;&quot;).s(scala.Predef.refArrayOps[String](as).mkString(&quot;,&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          331
+          -
+          347
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.TraversableOnce.mkString
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.refArrayOps[String](as).mkString(&quot;,&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          380
+          -
+          403
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;thanks for the  List: &quot;
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          378
+          -
+          421
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;thanks for the  List: &quot;, &quot;&quot;).s(list.toString())
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          404
+          -
+          419
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.SeqLike.toString
+        </td>
+        <td style="background: #AEF1AE">
+          list.toString()
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          420
+          -
+          421
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          472
+          -
+          482
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.MapLike.toString
+        </td>
+        <td style="background: #AEF1AE">
+          m.toString()
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          483
+          -
+          484
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          449
+          -
+          484
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;thanks for the map &quot;, &quot;&quot;).s(m.toString())
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          451
+          -
+          471
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;thanks for the map &quot;
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

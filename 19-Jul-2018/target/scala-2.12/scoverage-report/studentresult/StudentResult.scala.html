@@ -1,0 +1,2489 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          studentresult/StudentResult.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package studentresult
+</span>2 <span style=''>
+</span>3 <span style=''>/*
+</span>4 <span style=''>case class StudentResult(Id:Int,Name:String,division:String,section:String) {
+</span>5 <span style=''>
+</span>6 <span style=''>}
+</span>7 <span style=''>case class ScoreCard(Student_Id:Int,total_marks:Int,subject_1:Int,subject_2:Int,subject_3:Int){
+</span>8 <span style=''>  def totalMarks()= {
+</span>9 <span style=''>     subject_1 + subject_2 + subject_3
+</span>10 <span style=''>  }
+</span>11 <span style=''>}
+</span>12 <span style=''>object StudentResult{
+</span>13 <span style=''>
+</span>14 <span style=''>val Student=List()
+</span>15 <span style=''>*/
+</span>16 <span style=''>case class Student(id: Int, name: String, division: String, section: String)
+</span>17 <span style=''>
+</span>18 <span style=''>case class ScoreCard(id: Int, subject1: Float, subject2: Float, subject3: Float, totalMarks: Float)
+</span>19 <span style=''>
+</span>20 <span style=''>object ScoreCard {
+</span>21 <span style=''>  def apply(id: Int, subject1: Float, subject2: Float, subject3: Float): ScoreCard = {
+</span>22 <span style=''>    val totalMarks = </span><span style='background: #AEF1AE'>subject1 + subject2 + subject3</span><span style=''>
+</span>23 <span style=''>    </span><span style='background: #AEF1AE'>new ScoreCard(id, subject1, subject2, subject3, totalMarks)</span><span style=''>
+</span>24 <span style=''>
+</span>25 <span style=''>  }
+</span>26 <span style=''>
+</span>27 <span style=''>}
+</span>28 <span style=''>
+</span>29 <span style=''>class StudentResult {
+</span>30 <span style=''>
+</span>31 <span style=''>  val listOfStudents: List[Student] = </span><span style='background: #AEF1AE'>List(
+</span>32 <span style=''></span><span style='background: #AEF1AE'>    Student(1, &quot;Bob&quot;, &quot;11&quot;, &quot;A&quot;),
+</span>33 <span style=''></span><span style='background: #AEF1AE'>    Student(2, &quot;Dab&quot;, &quot;10&quot;, &quot;C&quot;),
+</span>34 <span style=''></span><span style='background: #AEF1AE'>    Student(3, &quot;Tab&quot;, &quot;10&quot;, &quot;B&quot;)
+</span>35 <span style=''></span><span style='background: #AEF1AE'>  )</span><span style=''>
+</span>36 <span style=''>
+</span>37 <span style=''>  val listOfScoreCard: List[ScoreCard] = </span><span style='background: #AEF1AE'>List(
+</span>38 <span style=''></span><span style='background: #AEF1AE'>    ScoreCard(1, 88.0f, 45.0f, 79.0f),
+</span>39 <span style=''></span><span style='background: #AEF1AE'>    ScoreCard(2, 67.0f, 80.0f, 45.0f),
+</span>40 <span style=''></span><span style='background: #AEF1AE'>    ScoreCard(3, 99.0f, 87.0f, 85.0f)
+</span>41 <span style=''></span><span style='background: #AEF1AE'>  )</span><span style=''>
+</span>42 <span style=''>
+</span>43 <span style=''>  def topThreeStudents(listOfStudents: List[Student], listOfScorecard: List[ScoreCard]): List[(Int, String, String, String)] = {
+</span>44 <span style=''>    </span><span style='background: #AEF1AE'>require(listOfScoreCard.size &gt;= 3, </span><span style='background: #F0ADAD'>&quot;List of Students and scorecard is not proper.&quot;</span><span style='background: #AEF1AE'>)</span><span style=''>
+</span>45 <span style=''>    val scoreIdOfTopThreeStudents = </span><span style='background: #AEF1AE'>listOfScoreCard.sortWith(_.totalMarks &gt; _.totalMarks).slice(0, 3).map(_.id)</span><span style=''>
+</span>46 <span style=''>    </span><span style='background: #AEF1AE'>scoreIdOfTopThreeStudents.map(studentId =&gt; listOfStudents.filter(_.id == studentId).head).map(stud =&gt; (stud.id, stud.name, stud.division, stud.section))</span><span style=''>
+</span>47 <span style=''>  }
+</span>48 <span style=''>
+</span>49 <span style=''>  def subject1Topper(listOfStudents: List[Student], listOfScorecard: List[ScoreCard]): (Int, String, String, String, Float, Float, Float, Float) = {
+</span>50 <span style=''>    val subject1Details = </span><span style='background: #AEF1AE'>listOfScoreCard.sortWith(_.subject1 &gt; _.subject1).head</span><span style=''>
+</span>51 <span style=''>    val subject1TopperDetails = </span><span style='background: #AEF1AE'>listOfStudents.filter(_.id == subject1Details.id).head</span><span style=''>
+</span>52 <span style=''>    </span><span style='background: #AEF1AE'>(subject1TopperDetails.id, subject1TopperDetails.name, subject1TopperDetails.division, subject1TopperDetails.section, subject1Details.subject1, subject1Details.subject2, subject1Details.subject3, subject1Details.totalMarks)</span><span style=''>
+</span>53 <span style=''>  }
+</span>54 <span style=''>
+</span>55 <span style=''>  def subject2Topper(listOfStudents: List[Student], listOfScorecard: List[ScoreCard]): (Int, String, String, String, Float, Float, Float, Float) = {
+</span>56 <span style=''>    val subject2Details = </span><span style='background: #F0ADAD'>listOfScoreCard.sortWith(_.subject1 &gt; _.subject1).head</span><span style=''>
+</span>57 <span style=''>    val subject2TopperDetails = </span><span style='background: #F0ADAD'>listOfStudents.filter(_.id == subject2Details.id).head</span><span style=''>
+</span>58 <span style=''>    </span><span style='background: #F0ADAD'>(subject2TopperDetails.id, subject2TopperDetails.name, subject2TopperDetails.division, subject2TopperDetails.section, subject2Details.subject1, subject2Details.subject2, subject2Details.subject3, subject2Details.totalMarks)</span><span style=''>
+</span>59 <span style=''>  }
+</span>60 <span style=''>
+</span>61 <span style=''>  def subject3Topper(listOfStudents: List[Student], listOfScorecard: List[ScoreCard]): (Int, String, String, String, Float, Float, Float, Float) = {
+</span>62 <span style=''>    val subject3Details = </span><span style='background: #F0ADAD'>listOfScoreCard.sortWith(_.subject1 &gt; _.subject1).head</span><span style=''>
+</span>63 <span style=''>    val subject3TopperDetails = </span><span style='background: #F0ADAD'>listOfStudents.filter(_.id == subject3Details.id).head</span><span style=''>
+</span>64 <span style=''>    </span><span style='background: #F0ADAD'>(subject3TopperDetails.id, subject3TopperDetails.name, subject3TopperDetails.division, subject3TopperDetails.section, subject3Details.subject1, subject3Details.subject2, subject3Details.subject3, subject3Details.totalMarks)</span><span style=''>
+</span>65 <span style=''>  }
+</span>66 <span style=''>
+</span>67 <span style=''>  def displayFullMarksheet(studentId: Int, listOfStudents: List[Student], listOfScoreCard: List[ScoreCard]): String = {
+</span>68 <span style=''>    </span><span style='background: #F0ADAD'>require(listOfScoreCard.nonEmpty, &quot;No student exists.&quot;)</span><span style=''>
+</span>69 <span style=''>    val scoreCardDetail = </span><span style='background: #F0ADAD'>listOfScoreCard.filter(_.id == studentId).head</span><span style=''>
+</span>70 <span style=''>    val studentDetails = </span><span style='background: #F0ADAD'>listOfStudents.filter(_.id == studentId).head</span><span style=''>
+</span>71 <span style=''>    </span><span style='background: #F0ADAD'>s&quot;ID : $studentId \n&quot; + s&quot;NAME : ${studentDetails.name} \n&quot; + s&quot;DIVISION-SECTION : ${studentDetails.division} - ${studentDetails.section} \n&quot; + s&quot;MARKS : \n&quot; + s&quot;SUBJECTS : \n&quot; + s&quot;  SUBJECT1 : ${scoreCardDetail.subject1} \n&quot; + s&quot;  SUBJECT2 : ${scoreCardDetail.subject2} \n&quot; + s&quot;  SUBJECT3 : ${scoreCardDetail.subject3} \n&quot; + s&quot;  TOTAL MARKS : ${scoreCardDetail.totalMarks} \n&quot;</span><span style=''>
+</span>72 <span style=''>  }
+</span>73 <span style=''>
+</span>74 <span style=''>
+</span>75 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          621
+          -
+          651
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Float.+
+        </td>
+        <td style="background: #AEF1AE">
+          subject1.+(subject2).+(subject3)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          656
+          -
+          715
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          studentresult.ScoreCard.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new ScoreCard(id, subject1, subject2, subject3, totalMarks)
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          786
+          -
+          896
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[studentresult.Student](Student.apply(1, &quot;Bob&quot;, &quot;11&quot;, &quot;A&quot;), Student.apply(2, &quot;Dab&quot;, &quot;10&quot;, &quot;C&quot;), Student.apply(3, &quot;Tab&quot;, &quot;10&quot;, &quot;B&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          796
+          -
+          824
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          studentresult.Student.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Student.apply(1, &quot;Bob&quot;, &quot;11&quot;, &quot;A&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          830
+          -
+          858
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          studentresult.Student.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Student.apply(2, &quot;Dab&quot;, &quot;10&quot;, &quot;C&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          864
+          -
+          892
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          studentresult.Student.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Student.apply(3, &quot;Tab&quot;, &quot;10&quot;, &quot;B&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          939
+          -
+          1064
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[studentresult.ScoreCard](ScoreCard.apply(1, 88.0, 45.0, 79.0), ScoreCard.apply(2, 67.0, 80.0, 45.0), ScoreCard.apply(3, 99.0, 87.0, 85.0))
+        </td>
+      </tr><tr>
+        <td>
+          38
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          949
+          -
+          982
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          studentresult.ScoreCard.apply
+        </td>
+        <td style="background: #AEF1AE">
+          ScoreCard.apply(1, 88.0, 45.0, 79.0)
+        </td>
+      </tr><tr>
+        <td>
+          39
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          988
+          -
+          1021
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          studentresult.ScoreCard.apply
+        </td>
+        <td style="background: #AEF1AE">
+          ScoreCard.apply(2, 67.0, 80.0, 45.0)
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          1027
+          -
+          1060
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          studentresult.ScoreCard.apply
+        </td>
+        <td style="background: #AEF1AE">
+          ScoreCard.apply(3, 99.0, 87.0, 85.0)
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          1234
+          -
+          1281
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;List of Students and scorecard is not proper.&quot;
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          1207
+          -
+          1232
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;=
+        </td>
+        <td style="background: #AEF1AE">
+          StudentResult.this.listOfScoreCard.size.&gt;=(3)
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          1199
+          -
+          1282
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.require
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.require(StudentResult.this.listOfScoreCard.size.&gt;=(3), &quot;List of Students and scorecard is not proper.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          1344
+          -
+          1371
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Float.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          x$1.totalMarks.&gt;(x$2.totalMarks)
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          1389
+          -
+          1393
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.id
+        </td>
+        <td style="background: #AEF1AE">
+          x$3.id
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          1319
+          -
+          1394
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.immutable.List.map
+        </td>
+        <td style="background: #AEF1AE">
+          StudentResult.this.listOfScoreCard.sortWith(((x$1: studentresult.ScoreCard, x$2: studentresult.ScoreCard) =&gt; x$1.totalMarks.&gt;(x$2.totalMarks))).slice(0, 3).map[Int, List[Int]](((x$3: studentresult.ScoreCard) =&gt; x$3.id))(immutable.this.List.canBuildFrom[Int])
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          1359
+          -
+          1371
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.totalMarks
+        </td>
+        <td style="background: #AEF1AE">
+          x$2.totalMarks
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          1382
+          -
+          1383
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          3
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          1379
+          -
+          1380
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          1388
+          -
+          1388
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[Int]
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          68
+        </td>
+        <td>
+          1502
+          -
+          1509
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.id
+        </td>
+        <td style="background: #AEF1AE">
+          stud.id
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          71
+        </td>
+        <td>
+          1537
+          -
+          1549
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.section
+        </td>
+        <td style="background: #AEF1AE">
+          stud.section
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          74
+        </td>
+        <td>
+          1399
+          -
+          1551
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.immutable.List.map
+        </td>
+        <td style="background: #AEF1AE">
+          scoreIdOfTopThreeStudents.map[studentresult.Student, List[studentresult.Student]](((studentId: Int) =&gt; listOfStudents.filter(((x$4: studentresult.Student) =&gt; x$4.id.==(studentId))).head))(immutable.this.List.canBuildFrom[studentresult.Student]).map[(Int, String, String, String), List[(Int, String, String, String)]](((stud: studentresult.Student) =&gt; scala.Tuple4.apply[Int, String, String, String](stud.id, stud.name, stud.division, stud.section)))(immutable.this.List.canBuildFrom[(Int, String, String, String)])
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          1464
+          -
+          1481
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          x$4.id.==(studentId)
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          73
+        </td>
+        <td>
+          1492
+          -
+          1492
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[(Int, String, String, String)]
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          67
+        </td>
+        <td>
+          1428
+          -
+          1428
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[studentresult.Student]
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          70
+        </td>
+        <td>
+          1522
+          -
+          1535
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.division
+        </td>
+        <td style="background: #AEF1AE">
+          stud.division
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          1511
+          -
+          1520
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.name
+        </td>
+        <td style="background: #AEF1AE">
+          stud.name
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          72
+        </td>
+        <td>
+          1501
+          -
+          1550
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple4.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple4.apply[Int, String, String, String](stud.id, stud.name, stud.division, stud.section)
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          66
+        </td>
+        <td>
+          1442
+          -
+          1487
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #AEF1AE">
+          listOfStudents.filter(((x$4: studentresult.Student) =&gt; x$4.id.==(studentId))).head
+        </td>
+      </tr><tr>
+        <td>
+          50
+        </td>
+        <td>
+          77
+        </td>
+        <td>
+          1732
+          -
+          1786
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #AEF1AE">
+          StudentResult.this.listOfScoreCard.sortWith(((x$5: studentresult.ScoreCard, x$6: studentresult.ScoreCard) =&gt; x$5.subject1.&gt;(x$6.subject1))).head
+        </td>
+      </tr><tr>
+        <td>
+          50
+        </td>
+        <td>
+          76
+        </td>
+        <td>
+          1757
+          -
+          1780
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Float.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          x$5.subject1.&gt;(x$6.subject1)
+        </td>
+      </tr><tr>
+        <td>
+          50
+        </td>
+        <td>
+          75
+        </td>
+        <td>
+          1770
+          -
+          1780
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject1
+        </td>
+        <td style="background: #AEF1AE">
+          x$6.subject1
+        </td>
+      </tr><tr>
+        <td>
+          51
+        </td>
+        <td>
+          80
+        </td>
+        <td>
+          1819
+          -
+          1873
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #AEF1AE">
+          listOfStudents.filter(((x$7: studentresult.Student) =&gt; x$7.id.==(subject1Details.id))).head
+        </td>
+      </tr><tr>
+        <td>
+          51
+        </td>
+        <td>
+          79
+        </td>
+        <td>
+          1841
+          -
+          1867
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          x$7.id.==(subject1Details.id)
+        </td>
+      </tr><tr>
+        <td>
+          51
+        </td>
+        <td>
+          78
+        </td>
+        <td>
+          1849
+          -
+          1867
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.id
+        </td>
+        <td style="background: #AEF1AE">
+          subject1Details.id
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          83
+        </td>
+        <td>
+          1933
+          -
+          1963
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.division
+        </td>
+        <td style="background: #AEF1AE">
+          subject1TopperDetails.division
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          86
+        </td>
+        <td>
+          2022
+          -
+          2046
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject2
+        </td>
+        <td style="background: #AEF1AE">
+          subject1Details.subject2
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          89
+        </td>
+        <td>
+          1878
+          -
+          2101
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple8.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple8.apply[Int, String, String, String, Float, Float, Float, Float](subject1TopperDetails.id, subject1TopperDetails.name, subject1TopperDetails.division, subject1TopperDetails.section, subject1Details.subject1, subject1Details.subject2, subject1Details.subject3, subject1Details.totalMarks)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          82
+        </td>
+        <td>
+          1905
+          -
+          1931
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.name
+        </td>
+        <td style="background: #AEF1AE">
+          subject1TopperDetails.name
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          85
+        </td>
+        <td>
+          1996
+          -
+          2020
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject1
+        </td>
+        <td style="background: #AEF1AE">
+          subject1Details.subject1
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          88
+        </td>
+        <td>
+          2074
+          -
+          2100
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.totalMarks
+        </td>
+        <td style="background: #AEF1AE">
+          subject1Details.totalMarks
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          87
+        </td>
+        <td>
+          2048
+          -
+          2072
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject3
+        </td>
+        <td style="background: #AEF1AE">
+          subject1Details.subject3
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          81
+        </td>
+        <td>
+          1879
+          -
+          1903
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.id
+        </td>
+        <td style="background: #AEF1AE">
+          subject1TopperDetails.id
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          84
+        </td>
+        <td>
+          1965
+          -
+          1994
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.section
+        </td>
+        <td style="background: #AEF1AE">
+          subject1TopperDetails.section
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          92
+        </td>
+        <td>
+          2282
+          -
+          2336
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #F0ADAD">
+          StudentResult.this.listOfScoreCard.sortWith(((x$8: studentresult.ScoreCard, x$9: studentresult.ScoreCard) =&gt; x$8.subject1.&gt;(x$9.subject1))).head
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          91
+        </td>
+        <td>
+          2307
+          -
+          2330
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Float.&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          x$8.subject1.&gt;(x$9.subject1)
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          90
+        </td>
+        <td>
+          2320
+          -
+          2330
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject1
+        </td>
+        <td style="background: #F0ADAD">
+          x$9.subject1
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          95
+        </td>
+        <td>
+          2369
+          -
+          2423
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #F0ADAD">
+          listOfStudents.filter(((x$10: studentresult.Student) =&gt; x$10.id.==(subject2Details.id))).head
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          94
+        </td>
+        <td>
+          2391
+          -
+          2417
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #F0ADAD">
+          x$10.id.==(subject2Details.id)
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          93
+        </td>
+        <td>
+          2399
+          -
+          2417
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.id
+        </td>
+        <td style="background: #F0ADAD">
+          subject2Details.id
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          101
+        </td>
+        <td>
+          2572
+          -
+          2596
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject2
+        </td>
+        <td style="background: #F0ADAD">
+          subject2Details.subject2
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          104
+        </td>
+        <td>
+          2428
+          -
+          2651
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple8.apply
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Tuple8.apply[Int, String, String, String, Float, Float, Float, Float](subject2TopperDetails.id, subject2TopperDetails.name, subject2TopperDetails.division, subject2TopperDetails.section, subject2Details.subject1, subject2Details.subject2, subject2Details.subject3, subject2Details.totalMarks)
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          98
+        </td>
+        <td>
+          2483
+          -
+          2513
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.division
+        </td>
+        <td style="background: #F0ADAD">
+          subject2TopperDetails.division
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          100
+        </td>
+        <td>
+          2546
+          -
+          2570
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject1
+        </td>
+        <td style="background: #F0ADAD">
+          subject2Details.subject1
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          103
+        </td>
+        <td>
+          2624
+          -
+          2650
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.totalMarks
+        </td>
+        <td style="background: #F0ADAD">
+          subject2Details.totalMarks
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          97
+        </td>
+        <td>
+          2455
+          -
+          2481
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.name
+        </td>
+        <td style="background: #F0ADAD">
+          subject2TopperDetails.name
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          96
+        </td>
+        <td>
+          2429
+          -
+          2453
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.id
+        </td>
+        <td style="background: #F0ADAD">
+          subject2TopperDetails.id
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          99
+        </td>
+        <td>
+          2515
+          -
+          2544
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.section
+        </td>
+        <td style="background: #F0ADAD">
+          subject2TopperDetails.section
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          102
+        </td>
+        <td>
+          2598
+          -
+          2622
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject3
+        </td>
+        <td style="background: #F0ADAD">
+          subject2Details.subject3
+        </td>
+      </tr><tr>
+        <td>
+          62
+        </td>
+        <td>
+          107
+        </td>
+        <td>
+          2832
+          -
+          2886
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #F0ADAD">
+          StudentResult.this.listOfScoreCard.sortWith(((x$11: studentresult.ScoreCard, x$12: studentresult.ScoreCard) =&gt; x$11.subject1.&gt;(x$12.subject1))).head
+        </td>
+      </tr><tr>
+        <td>
+          62
+        </td>
+        <td>
+          106
+        </td>
+        <td>
+          2857
+          -
+          2880
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Float.&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          x$11.subject1.&gt;(x$12.subject1)
+        </td>
+      </tr><tr>
+        <td>
+          62
+        </td>
+        <td>
+          105
+        </td>
+        <td>
+          2870
+          -
+          2880
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject1
+        </td>
+        <td style="background: #F0ADAD">
+          x$12.subject1
+        </td>
+      </tr><tr>
+        <td>
+          63
+        </td>
+        <td>
+          110
+        </td>
+        <td>
+          2919
+          -
+          2973
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #F0ADAD">
+          listOfStudents.filter(((x$13: studentresult.Student) =&gt; x$13.id.==(subject3Details.id))).head
+        </td>
+      </tr><tr>
+        <td>
+          63
+        </td>
+        <td>
+          109
+        </td>
+        <td>
+          2941
+          -
+          2967
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #F0ADAD">
+          x$13.id.==(subject3Details.id)
+        </td>
+      </tr><tr>
+        <td>
+          63
+        </td>
+        <td>
+          108
+        </td>
+        <td>
+          2949
+          -
+          2967
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.id
+        </td>
+        <td style="background: #F0ADAD">
+          subject3Details.id
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          119
+        </td>
+        <td>
+          2978
+          -
+          3201
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple8.apply
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Tuple8.apply[Int, String, String, String, Float, Float, Float, Float](subject3TopperDetails.id, subject3TopperDetails.name, subject3TopperDetails.division, subject3TopperDetails.section, subject3Details.subject1, subject3Details.subject2, subject3Details.subject3, subject3Details.totalMarks)
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          113
+        </td>
+        <td>
+          3033
+          -
+          3063
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.division
+        </td>
+        <td style="background: #F0ADAD">
+          subject3TopperDetails.division
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          116
+        </td>
+        <td>
+          3122
+          -
+          3146
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject2
+        </td>
+        <td style="background: #F0ADAD">
+          subject3Details.subject2
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          115
+        </td>
+        <td>
+          3096
+          -
+          3120
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject1
+        </td>
+        <td style="background: #F0ADAD">
+          subject3Details.subject1
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          118
+        </td>
+        <td>
+          3174
+          -
+          3200
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.totalMarks
+        </td>
+        <td style="background: #F0ADAD">
+          subject3Details.totalMarks
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          112
+        </td>
+        <td>
+          3005
+          -
+          3031
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.name
+        </td>
+        <td style="background: #F0ADAD">
+          subject3TopperDetails.name
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          114
+        </td>
+        <td>
+          3065
+          -
+          3094
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.section
+        </td>
+        <td style="background: #F0ADAD">
+          subject3TopperDetails.section
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          117
+        </td>
+        <td>
+          3148
+          -
+          3172
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject3
+        </td>
+        <td style="background: #F0ADAD">
+          subject3Details.subject3
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          111
+        </td>
+        <td>
+          2979
+          -
+          3003
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.id
+        </td>
+        <td style="background: #F0ADAD">
+          subject3TopperDetails.id
+        </td>
+      </tr><tr>
+        <td>
+          68
+        </td>
+        <td>
+          122
+        </td>
+        <td>
+          3331
+          -
+          3386
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.require
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.require(listOfScoreCard.nonEmpty, &quot;No student exists.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          68
+        </td>
+        <td>
+          121
+        </td>
+        <td>
+          3365
+          -
+          3385
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;No student exists.&quot;
+        </td>
+      </tr><tr>
+        <td>
+          68
+        </td>
+        <td>
+          120
+        </td>
+        <td>
+          3339
+          -
+          3363
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.TraversableOnce.nonEmpty
+        </td>
+        <td style="background: #F0ADAD">
+          listOfScoreCard.nonEmpty
+        </td>
+      </tr><tr>
+        <td>
+          69
+        </td>
+        <td>
+          124
+        </td>
+        <td>
+          3413
+          -
+          3459
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #F0ADAD">
+          listOfScoreCard.filter(((x$14: studentresult.ScoreCard) =&gt; x$14.id.==(studentId))).head
+        </td>
+      </tr><tr>
+        <td>
+          69
+        </td>
+        <td>
+          123
+        </td>
+        <td>
+          3436
+          -
+          3453
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #F0ADAD">
+          x$14.id.==(studentId)
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          125
+        </td>
+        <td>
+          3507
+          -
+          3524
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #F0ADAD">
+          x$15.id.==(studentId)
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          126
+        </td>
+        <td>
+          3485
+          -
+          3530
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #F0ADAD">
+          listOfStudents.filter(((x$15: studentresult.Student) =&gt; x$15.id.==(studentId))).head
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          137
+        </td>
+        <td>
+          3649
+          -
+          3671
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.section
+        </td>
+        <td style="background: #F0ADAD">
+          studentDetails.section
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          146
+        </td>
+        <td>
+          3805
+          -
+          3809
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; \\n&quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          155
+        </td>
+        <td>
+          3881
+          -
+          3907
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.totalMarks
+        </td>
+        <td style="background: #F0ADAD">
+          scoreCardDetail.totalMarks
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          128
+        </td>
+        <td>
+          3552
+          -
+          3556
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; \\n&quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          131
+        </td>
+        <td>
+          3570
+          -
+          3589
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.name
+        </td>
+        <td style="background: #F0ADAD">
+          studentDetails.name
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          140
+        </td>
+        <td>
+          3695
+          -
+          3711
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #F0ADAD">
+          scala.StringContext.apply(&quot;SUBJECTS : \\n&quot;).s()
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          149
+        </td>
+        <td>
+          3814
+          -
+          3828
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;  SUBJECT3 : &quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          134
+        </td>
+        <td>
+          3644
+          -
+          3648
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; - &quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          151
+        </td>
+        <td>
+          3829
+          -
+          3853
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject3
+        </td>
+        <td style="background: #F0ADAD">
+          scoreCardDetail.subject3
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          142
+        </td>
+        <td>
+          3756
+          -
+          3760
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; \\n&quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          133
+        </td>
+        <td>
+          3599
+          -
+          3619
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;DIVISION-SECTION : &quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          127
+        </td>
+        <td>
+          3537
+          -
+          3543
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;ID : &quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          136
+        </td>
+        <td>
+          3620
+          -
+          3643
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.Student.division
+        </td>
+        <td style="background: #F0ADAD">
+          studentDetails.division
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          145
+        </td>
+        <td>
+          3765
+          -
+          3779
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;  SUBJECT2 : &quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          154
+        </td>
+        <td>
+          3908
+          -
+          3912
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; \\n&quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          139
+        </td>
+        <td>
+          3679
+          -
+          3692
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #F0ADAD">
+          scala.StringContext.apply(&quot;MARKS : \\n&quot;).s()
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          130
+        </td>
+        <td>
+          3590
+          -
+          3594
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; \\n&quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          157
+        </td>
+        <td>
+          3535
+          -
+          3912
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #F0ADAD">
+          scala.StringContext.apply(&quot;ID : &quot;, &quot; \\n&quot;).s(studentId).+(scala.StringContext.apply(&quot;NAME : &quot;, &quot; \\n&quot;).s(studentDetails.name)).+(scala.StringContext.apply(&quot;DIVISION-SECTION : &quot;, &quot; - &quot;, &quot; \\n&quot;).s(studentDetails.division, studentDetails.section)).+(scala.StringContext.apply(&quot;MARKS : \\n&quot;).s()).+(scala.StringContext.apply(&quot;SUBJECTS : \\n&quot;).s()).+(scala.StringContext.apply(&quot;  SUBJECT1 : &quot;, &quot; \\n&quot;).s(scoreCardDetail.subject1)).+(scala.StringContext.apply(&quot;  SUBJECT2 : &quot;, &quot; \\n&quot;).s(scoreCardDetail.subject2)).+(scala.StringContext.apply(&quot;  SUBJECT3 : &quot;, &quot; \\n&quot;).s(scoreCardDetail.subject3)).+(scala.StringContext.apply(&quot;  TOTAL MARKS : &quot;, &quot; \\n&quot;).s(scoreCardDetail.totalMarks))
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          148
+        </td>
+        <td>
+          3763
+          -
+          3809
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #F0ADAD">
+          scala.StringContext.apply(&quot;  SUBJECT2 : &quot;, &quot; \\n&quot;).s(scoreCardDetail.subject2)
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          147
+        </td>
+        <td>
+          3780
+          -
+          3804
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject2
+        </td>
+        <td style="background: #F0ADAD">
+          scoreCardDetail.subject2
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          156
+        </td>
+        <td>
+          3861
+          -
+          3912
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #F0ADAD">
+          scala.StringContext.apply(&quot;  TOTAL MARKS : &quot;, &quot; \\n&quot;).s(scoreCardDetail.totalMarks)
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          129
+        </td>
+        <td>
+          3561
+          -
+          3569
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;NAME : &quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          138
+        </td>
+        <td>
+          3597
+          -
+          3676
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #F0ADAD">
+          scala.StringContext.apply(&quot;DIVISION-SECTION : &quot;, &quot; - &quot;, &quot; \\n&quot;).s(studentDetails.division, studentDetails.section)
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          132
+        </td>
+        <td>
+          3559
+          -
+          3594
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #F0ADAD">
+          scala.StringContext.apply(&quot;NAME : &quot;, &quot; \\n&quot;).s(studentDetails.name)
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          150
+        </td>
+        <td>
+          3854
+          -
+          3858
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; \\n&quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          141
+        </td>
+        <td>
+          3716
+          -
+          3730
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;  SUBJECT1 : &quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          144
+        </td>
+        <td>
+          3714
+          -
+          3760
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #F0ADAD">
+          scala.StringContext.apply(&quot;  SUBJECT1 : &quot;, &quot; \\n&quot;).s(scoreCardDetail.subject1)
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          153
+        </td>
+        <td>
+          3863
+          -
+          3880
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;  TOTAL MARKS : &quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          135
+        </td>
+        <td>
+          3672
+          -
+          3676
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; \\n&quot;
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          152
+        </td>
+        <td>
+          3812
+          -
+          3858
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #F0ADAD">
+          scala.StringContext.apply(&quot;  SUBJECT3 : &quot;, &quot; \\n&quot;).s(scoreCardDetail.subject3)
+        </td>
+      </tr><tr>
+        <td>
+          71
+        </td>
+        <td>
+          143
+        </td>
+        <td>
+          3731
+          -
+          3755
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          studentresult.ScoreCard.subject1
+        </td>
+        <td style="background: #F0ADAD">
+          scoreCardDetail.subject1
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

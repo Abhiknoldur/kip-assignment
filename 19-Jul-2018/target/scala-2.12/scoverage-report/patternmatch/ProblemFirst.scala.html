@@ -1,0 +1,633 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          patternmatch/ProblemFirst.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package patternmatch
+</span>2 <span style=''>
+</span>3 <span style=''>class ProblemFirst {
+</span>4 <span style=''>
+</span>5 <span style=''>  def findMax(l: List[Int]):Int= {
+</span>6 <span style=''>    l match {
+</span>7 <span style=''>      case Nil=&gt;</span><span style='background: #F0ADAD'>sys.exit</span><span style=''>
+</span>8 <span style=''>      case x :: tail =&gt; if (</span><span style='background: #AEF1AE'>tail.isEmpty</span><span style=''>) </span><span style='background: #AEF1AE'>x</span><span style=''> else </span><span style='background: #AEF1AE'>if (x &gt; findMax(tail)) x else findMax(tail)</span><span style=''>
+</span>9 <span style=''>    }
+</span>10 <span style=''>  }
+</span>11 <span style=''>
+</span>12 <span style=''>
+</span>13 <span style=''>  def findLength(l:List[Int]):Int={
+</span>14 <span style=''>    l match {
+</span>15 <span style=''>      case Nil=&gt;</span><span style='background: #AEF1AE'>0</span><span style=''>
+</span>16 <span style=''>      case _=&gt;</span><span style='background: #AEF1AE'>findLength(l.tail)+1</span><span style=''>
+</span>17 <span style=''>    }
+</span>18 <span style=''>  }
+</span>19 <span style=''>
+</span>20 <span style=''>
+</span>21 <span style=''>  def nth(list: List[Int], n: Int): Int = {
+</span>22 <span style=''>    def tailNth(list: List[Int], n: Int, num: Int): Int = {
+</span>23 <span style=''>      n match {
+</span>24 <span style=''>        case 0 =&gt; num
+</span>25 <span style=''>        case _ =&gt; </span><span style='background: #AEF1AE'>tailNth(list.init, n - 1, list.last)</span><span style=''>
+</span>26 <span style=''>      }
+</span>27 <span style=''>    }
+</span>28 <span style=''>
+</span>29 <span style=''>    </span><span style='background: #AEF1AE'>tailNth(list, n, list.head)</span><span style=''>
+</span>30 <span style=''>  }
+</span>31 <span style=''>
+</span>32 <span style=''>  def findMin(l: List[Int]):Int= {
+</span>33 <span style=''>    l match {
+</span>34 <span style=''>      case Nil=&gt;</span><span style='background: #F0ADAD'>sys.exit</span><span style=''>
+</span>35 <span style=''>      case x :: tail =&gt; if (</span><span style='background: #AEF1AE'>tail.isEmpty</span><span style=''>) </span><span style='background: #AEF1AE'>x</span><span style=''> else </span><span style='background: #AEF1AE'>if (x &lt; findMin(tail)) x else findMin(tail)</span><span style=''>
+</span>36 <span style=''>    }
+</span>37 <span style=''>  }
+</span>38 <span style=''>
+</span>39 <span style=''>
+</span>40 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          7
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          109
+          -
+          117
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.sys.exit
+        </td>
+        <td style="background: #F0ADAD">
+          scala.sys.`package`.exit()
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          171
+          -
+          188
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          x.&gt;(ProblemFirst.this.findMax(tail))
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          197
+          -
+          210
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          patternmatch.ProblemFirst.findMax
+        </td>
+        <td style="background: #AEF1AE">
+          ProblemFirst.this.findMax(tail)
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          146
+          -
+          158
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.SeqLike.isEmpty
+        </td>
+        <td style="background: #AEF1AE">
+          tail.isEmpty
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          175
+          -
+          188
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          patternmatch.ProblemFirst.findMax
+        </td>
+        <td style="background: #AEF1AE">
+          ProblemFirst.this.findMax(tail)
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          197
+          -
+          210
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          patternmatch.ProblemFirst.findMax
+        </td>
+        <td style="background: #AEF1AE">
+          ProblemFirst.this.findMax(tail)
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          167
+          -
+          210
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          if (x.&gt;(ProblemFirst.this.findMax(tail)))
+  x
+else
+  ProblemFirst.this.findMax(tail)
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          160
+          -
+          161
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          patternmatch.ProblemFirst.x
+        </td>
+        <td style="background: #AEF1AE">
+          x
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          190
+          -
+          191
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          patternmatch.ProblemFirst.x
+        </td>
+        <td style="background: #AEF1AE">
+          x
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          289
+          -
+          290
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          305
+          -
+          325
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          ProblemFirst.this.findLength(l.tail).+(1)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          524
+          -
+          533
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.LinearSeqOptimized.last
+        </td>
+        <td style="background: #AEF1AE">
+          list.last
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          517
+          -
+          522
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.-
+        </td>
+        <td style="background: #AEF1AE">
+          n.-(1)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          506
+          -
+          515
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.TraversableLike.init
+        </td>
+        <td style="background: #AEF1AE">
+          list.init
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          498
+          -
+          534
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          patternmatch.ProblemFirst.tailNth
+        </td>
+        <td style="background: #AEF1AE">
+          tailNth(list.init, n.-(1), list.last)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          554
+          -
+          581
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          patternmatch.ProblemFirst.tailNth
+        </td>
+        <td style="background: #AEF1AE">
+          tailNth(list, n, list.head)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          571
+          -
+          580
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #AEF1AE">
+          list.head
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          652
+          -
+          660
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.sys.exit
+        </td>
+        <td style="background: #F0ADAD">
+          scala.sys.`package`.exit()
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          733
+          -
+          734
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          patternmatch.ProblemFirst.x
+        </td>
+        <td style="background: #AEF1AE">
+          x
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          710
+          -
+          753
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          if (x.&lt;(ProblemFirst.this.findMin(tail)))
+  x
+else
+  ProblemFirst.this.findMin(tail)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          703
+          -
+          704
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          patternmatch.ProblemFirst.x
+        </td>
+        <td style="background: #AEF1AE">
+          x
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          714
+          -
+          731
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          x.&lt;(ProblemFirst.this.findMin(tail))
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          740
+          -
+          753
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          patternmatch.ProblemFirst.findMin
+        </td>
+        <td style="background: #AEF1AE">
+          ProblemFirst.this.findMin(tail)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          689
+          -
+          701
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.SeqLike.isEmpty
+        </td>
+        <td style="background: #AEF1AE">
+          tail.isEmpty
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          718
+          -
+          731
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          patternmatch.ProblemFirst.findMin
+        </td>
+        <td style="background: #AEF1AE">
+          ProblemFirst.this.findMin(tail)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          740
+          -
+          753
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          patternmatch.ProblemFirst.findMin
+        </td>
+        <td style="background: #AEF1AE">
+          ProblemFirst.this.findMin(tail)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>
