@@ -1,0 +1,16 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mSortingTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInsertion Sort[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort sorted list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort unsorted list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort reversed list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort list with negative integers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSelection Sort[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort sorted list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort unsorted list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort reversed list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort list with negative integers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBubble Sort[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort sorted list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort unsorted list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort reversed list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sort list with negative integers[0m[0m
