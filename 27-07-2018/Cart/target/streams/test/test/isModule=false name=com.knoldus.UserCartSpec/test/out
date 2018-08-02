@@ -1,0 +1,8 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mUserCartSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if user can add item successfully in the cart[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if request to add quantity of an item greater the available stock is denied[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if item quantity can be updated successfully in the cart[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if item quantity can be removed successfully from the cart[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if bill for a medical item is generated correctly[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if bill for a general item is generated correctly[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if items in the cart are displayed correctly[0m[0m

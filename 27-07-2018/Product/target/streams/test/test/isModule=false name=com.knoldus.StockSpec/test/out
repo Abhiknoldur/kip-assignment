@@ -1,0 +1,8 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mStockSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if medical item is added successfully in the stock[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if general item is also added successfully in the stock[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if item quantity can be updated successfully in the stock[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if item quantity requested by user is available in the stock[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if huge item quantity requested by user is available in the stock[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if user can see the available items and quantity in the stock[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check if user can see the available items in the stock[0m[0m
