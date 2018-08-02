@@ -1,0 +1,215 @@
+<scoverage 
+statement-count="47" statements-invoked="47" statement-rate="100.00" branch-rate="100.00" version="1.0" timestamp="1531483299186">
+    <packages>
+        <package name="Area" statement-count="22" statements-invoked="22" statement-rate="100.00">
+            <classes>
+                <class 
+                name="Area.Area" filename="Area/Area.scala" statement-count="22" statements-invoked="22" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="Area/Area/area" statement-count="22" statements-invoked="22" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="374" end="379" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="258" end="259" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="288" end="297" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="131" end="141" line="7" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="358" end="398" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="143" end="163" line="7" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="308" end="323" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="324" end="325" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="143" end="163" line="7" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="177" end="454" line="8" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="235" end="240" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="360" end="369" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="219" end="259" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="126" end="127" line="7" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="380" end="396" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="397" end="398" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="241" end="257" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="417" end="446" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="120" end="141" line="7" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="302" end="307" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="286" end="325" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="Area" class="Area" class-type="Class" full-class-name="Area.Area" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/Area/Area.scala" method="area" start="221" end="230" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+        <package name="fibonacci" statement-count="11" statements-invoked="11" statement-rate="100.00">
+            <classes>
+                <class 
+                name="fibonacci.Fibonacci" filename="fibonacci/Fibonacci.scala" statement-count="11" statements-invoked="11" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="fibonacci/Fibonacci/fib" statement-count="11" statements-invoked="11" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="147" end="153" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="186" end="337" line="9" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="203" end="215" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="282" end="287" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="278" end="318" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="155" end="180" line="9" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="255" end="257" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="197" end="216" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="299" end="316" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="155" end="180" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fibonacci" class="Fibonacci" class-type="Class" full-class-name="fibonacci.Fibonacci" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/fibonacci/Fibonacci.scala" method="fib" start="350" end="362" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+        <package name="person" statement-count="8" statements-invoked="8" statement-rate="100.00">
+            <classes>
+                <class 
+                name="person.Person" filename="person/Person.scala" statement-count="8" statements-invoked="8" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="person/Person/compare" statement-count="8" statements-invoked="8" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="person" class="Person" class-type="Class" full-class-name="person.Person" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/person/Person.scala" method="compare" start="199" end="232" line="10" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="person" class="Person" class-type="Class" full-class-name="person.Person" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/person/Person.scala" method="compare" start="120" end="140" line="4" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="person" class="Person" class-type="Class" full-class-name="person.Person" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/person/Person.scala" method="compare" start="154" end="171" line="6" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="person" class="Person" class-type="Class" full-class-name="person.Person" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/person/Person.scala" method="compare" start="199" end="232" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="person" class="Person" class-type="Class" full-class-name="person.Person" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/person/Person.scala" method="compare" start="131" end="140" line="4" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="person" class="Person" class-type="Class" full-class-name="person.Person" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/person/Person.scala" method="compare" start="154" end="171" line="6" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="person" class="Person" class-type="Class" full-class-name="person.Person" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/person/Person.scala" method="compare" start="163" end="171" line="6" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="person" class="Person" class-type="Class" full-class-name="person.Person" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/person/Person.scala" method="compare" start="216" end="232" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+        <package name="sum" statement-count="6" statements-invoked="6" statement-rate="100.00">
+            <classes>
+                <class 
+                name="sum.Sum" filename="sum/Sum.scala" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="sum/Sum/sumSquares" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="sum" class="Sum" class-type="Class" full-class-name="sum.Sum" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/sum/Sum.scala" method="sumSquares" start="235" end="240" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="sum" class="Sum" class-type="Class" full-class-name="sum.Sum" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/sum/Sum.scala" method="sumSquares" start="224" end="241" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="sum/Sum/sumCubes" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="sum" class="Sum" class-type="Class" full-class-name="sum.Sum" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/sum/Sum.scala" method="sumCubes" start="290" end="315" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="sum" class="Sum" class-type="Class" full-class-name="sum.Sum" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/sum/Sum.scala" method="sumCubes" start="305" end="314" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method name="sum/Sum/sum" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="sum" class="Sum" class-type="Class" full-class-name="sum.Sum" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/sum/Sum.scala" method="sum" start="103" end="116" line="6" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+                        </method>
+                        <method name="sum/Sum/sumInts" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="sum" class="Sum" class-type="Class" full-class-name="sum.Sum" source="/home/knoldus/Downloads/AssignmentDay-5/src/main/scala/sum/Sum.scala" method="sumInts" start="168" end="173" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+                        </method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

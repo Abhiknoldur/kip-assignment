@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage 
+line-rate="1.00" lines-valid="47" lines-covered="47" branches-valid="6" branches-covered="6" branch-rate="1.00" complexity="0" version="1.0" timestamp="1531483299119">
+    <sources>
+        <source>--source</source>
+        <source>/home/knoldus/Downloads/AssignmentDay-5/src/main/scala</source>
+    </sources>
+    <packages>
+        <package name="Area" line-rate="1.00" branch-rate="1.00" complexity="0">
+            <classes>
+                <class name="Area.Area" filename="Area/Area.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="Area/Area/area" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="11" hits="1" branch="false"/>
+                                <line number="9" hits="1" branch="false"/>
+                                <line number="10" hits="1" branch="false"/>
+                                <line number="7" hits="1" branch="false"/>
+                                <line number="11" hits="1" branch="false"/>
+                                <line number="7" hits="1" branch="false"/>
+                                <line number="10" hits="1" branch="false"/>
+                                <line number="10" hits="1" branch="false"/>
+                                <line number="7" hits="1" branch="false"/>
+                                <line number="8" hits="1" branch="false"/>
+                                <line number="9" hits="1" branch="false"/>
+                                <line number="11" hits="1" branch="false"/>
+                                <line number="9" hits="1" branch="false"/>
+                                <line number="7" hits="1" branch="false"/>
+                                <line number="11" hits="1" branch="false"/>
+                                <line number="11" hits="1" branch="false"/>
+                                <line number="9" hits="1" branch="false"/>
+                                <line number="12" hits="1" branch="false"/>
+                                <line number="7" hits="1" branch="false"/>
+                                <line number="10" hits="1" branch="false"/>
+                                <line number="10" hits="1" branch="false"/>
+                                <line number="9" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                        <line number="10" hits="1" branch="false"/>
+                        <line number="7" hits="1" branch="false"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="7" hits="1" branch="false"/>
+                        <line number="10" hits="1" branch="false"/>
+                        <line number="10" hits="1" branch="false"/>
+                        <line number="7" hits="1" branch="false"/>
+                        <line number="8" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                        <line number="7" hits="1" branch="false"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                        <line number="12" hits="1" branch="false"/>
+                        <line number="7" hits="1" branch="false"/>
+                        <line number="10" hits="1" branch="false"/>
+                        <line number="10" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                    </lines>
+                </class>
+            </classes>
+        </package>
+        <package name="fibonacci" line-rate="1.00" branch-rate="1.00" complexity="0">
+            <classes>
+                <class 
+                name="fibonacci.Fibonacci" filename="fibonacci/Fibonacci.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="fibonacci/Fibonacci/fib" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="9" hits="1" branch="false"/>
+                                <line number="9" hits="1" branch="false"/>
+                                <line number="11" hits="1" branch="false"/>
+                                <line number="14" hits="1" branch="false"/>
+                                <line number="14" hits="1" branch="false"/>
+                                <line number="9" hits="1" branch="false"/>
+                                <line number="13" hits="1" branch="false"/>
+                                <line number="11" hits="1" branch="false"/>
+                                <line number="14" hits="1" branch="false"/>
+                                <line number="9" hits="1" branch="false"/>
+                                <line number="20" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="9" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="14" hits="1" branch="false"/>
+                        <line number="14" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                        <line number="13" hits="1" branch="false"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="14" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                        <line number="20" hits="1" branch="false"/>
+                    </lines>
+</class>
+            </classes>
+        </package>
+        <package name="person" line-rate="1.00" branch-rate="1.00" complexity="0">
+            <classes>
+                <class name="person.Person" filename="person/Person.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="person/Person/compare" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="10" hits="1" branch="false"/>
+                                <line number="4" hits="1" branch="false"/>
+                                <line number="6" hits="1" branch="false"/>
+                                <line number="10" hits="1" branch="false"/>
+                                <line number="4" hits="1" branch="false"/>
+                                <line number="6" hits="1" branch="false"/>
+                                <line number="6" hits="1" branch="false"/>
+                                <line number="10" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="10" hits="1" branch="false"/>
+                        <line number="4" hits="1" branch="false"/>
+                        <line number="6" hits="1" branch="false"/>
+                        <line number="10" hits="1" branch="false"/>
+                        <line number="4" hits="1" branch="false"/>
+                        <line number="6" hits="1" branch="false"/>
+                        <line number="6" hits="1" branch="false"/>
+                        <line number="10" hits="1" branch="false"/>
+                    </lines>
+                </class>
+            </classes>
+        </package>
+        <package name="sum" line-rate="1.00" branch-rate="1.00" complexity="0">
+            <classes>
+                <class name="sum.Sum" filename="sum/Sum.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="sum/Sum/sumSquares" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="11" hits="1" branch="false"/>
+                                <line number="11" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="sum/Sum/sumCubes" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="13" hits="1" branch="false"/>
+                                <line number="13" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="sum/Sum/sum" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="6" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="sum/Sum/sumInts" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="9" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="13" hits="1" branch="false"/>
+                        <line number="13" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="6" hits="1" branch="false"/>
+                    </lines>
+                </class>
+            </classes>
+        </package>
+    </packages>
+</coverage>

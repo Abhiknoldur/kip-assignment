@@ -1,0 +1,303 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          fibonacci/Fibonacci.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package fibonacci
+</span>2 <span style=''>
+</span>3 <span style=''>
+</span>4 <span style=''>class Fibonacci {
+</span>5 <span style=''>  def fibonacciMetod(x: Int): Unit = {
+</span>6 <span style=''>
+</span>7 <span style=''>    def fib(x: Int, prevnum: Int, nextnum: Int): Unit = {
+</span>8 <span style=''>
+</span>9 <span style=''>      if (</span><span style='background: #AEF1AE'>x &lt;= 0</span><span style=''>) </span><span style='background: #AEF1AE'>println(&quot;Invalid number&quot;)</span><span style=''> else </span><span style='background: #AEF1AE'>{
+</span>10 <span style=''></span><span style='background: #AEF1AE'>
+</span>11 <span style=''></span><span style='background: #AEF1AE'>        print(s&quot;$prevnum &quot;)
+</span>12 <span style=''></span><span style='background: #AEF1AE'>        x match {
+</span>13 <span style=''></span><span style='background: #AEF1AE'>          case 1 =&gt; ()
+</span>14 <span style=''></span><span style='background: #AEF1AE'>          case _ =&gt; fib(x - 1, nextnum, (nextnum + prevnum))
+</span>15 <span style=''></span><span style='background: #AEF1AE'>        }
+</span>16 <span style=''></span><span style='background: #AEF1AE'>
+</span>17 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
+</span>18 <span style=''>
+</span>19 <span style=''>    }
+</span>20 <span style=''>    (</span><span style='background: #AEF1AE'>fib(x, 0, 1)</span><span style=''>)
+</span>21 <span style=''>
+</span>22 <span style=''>  }
+</span>23 <span style=''>
+</span>24 <span style=''>
+</span>25 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          147
+          -
+          153
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&lt;=
+        </td>
+        <td style="background: #AEF1AE">
+          x.&lt;=(0)
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          186
+          -
+          337
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  scala.Predef.print(scala.StringContext.apply(&quot;&quot;, &quot; &quot;).s(prevnum));
+  x match {
+    case 1 =&gt; ()
+    case _ =&gt; fib(x.-(1), nextnum, nextnum.+(prevnum))
+  }
+}
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          155
+          -
+          180
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Invalid number&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          155
+          -
+          180
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Invalid number&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          203
+          -
+          215
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;&quot;, &quot; &quot;).s(prevnum)
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          197
+          -
+          216
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.print(scala.StringContext.apply(&quot;&quot;, &quot; &quot;).s(prevnum))
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          255
+          -
+          257
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          282
+          -
+          287
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.-
+        </td>
+        <td style="background: #AEF1AE">
+          x.-(1)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          278
+          -
+          318
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fibonacci.Fibonacci.fib
+        </td>
+        <td style="background: #AEF1AE">
+          fib(x.-(1), nextnum, nextnum.+(prevnum))
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          299
+          -
+          316
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          nextnum.+(prevnum)
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          350
+          -
+          362
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fibonacci.Fibonacci.fib
+        </td>
+        <td style="background: #AEF1AE">
+          fib(x, 0, 1)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>
