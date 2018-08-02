@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>forexpress.sc</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,0,255); }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+forexpress.sc</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">val </span><span class="s1">list: List[Int] = List(</span><span class="s2">1</span><span class="s1">, </span><span class="s2">2</span><span class="s1">, </span><span class="s2">3</span><span class="s1">, </span><span class="s2">4</span><span class="s1">, </span><span class="s2">5</span><span class="s1">, </span><span class="s2">6</span><span class="s1">) 
+list.headOption 
+ 
+</span><span class="s0">val </span><span class="s1">list2: List[Int] = List(</span><span class="s2">7</span><span class="s1">, </span><span class="s2">8</span><span class="s1">, </span><span class="s2">9</span><span class="s1">, </span><span class="s2">1</span><span class="s1">, </span><span class="s2">2</span><span class="s1">, </span><span class="s2">3</span><span class="s1">) 
+ 
+ 
+list.flatMap(l1 =&gt; 
+  list2.map(l2 =&gt; 
+    l1 + l2 
+  ) 
+) 
+ 
+</span><span class="s0">for </span><span class="s1">{ 
+  l1 &lt;- list 
+  l2 &lt;- list2 
+  </span><span class="s0">if </span><span class="s1">l1 &gt;= </span><span class="s2">5</span><span class="s1"> 
+} </span><span class="s0">yield </span><span class="s1">l1 + l2 
+ 
+ 
+</span><span class="s0">for </span><span class="s1">{ 
+  l1 &lt;- list 
+ 
+} </span><span class="s0">yield </span><span class="s1">incre(l1) 
+</span><span class="s0">val </span><span class="s1">persons = List( 
+  Person(</span><span class="s3">&quot;fhhjghk&quot;</span><span class="s1">, </span><span class="s0">true</span><span class="s1">), 
+  Person(</span><span class="s3">&quot;Abi&quot;</span><span class="s1">, </span><span class="s0">false</span><span class="s1">) 
+) 
+</span><span class="s0">val </span><span class="s1">x: Option[String] = None 
+ 
+</span><span class="s0">def </span><span class="s1">incre(List: Int) = List + </span><span class="s2">1</span><span class="s1"> 
+ 
+</span><span class="s0">for </span><span class="s1">{ 
+  person &lt;- persons 
+  name = person.Name 
+ 
+  </span><span class="s0">if </span><span class="s1">(person.IsActive) 
+} </span><span class="s0">yield </span><span class="s3">&quot;I'm &quot; </span><span class="s1">+ name 
+ 
+@deprecated(</span><span class="s3">&quot;My message&quot;</span><span class="s1">, </span><span class="s3">&quot;sdfg&quot;</span><span class="s1">) 
+</span><span class="s0">def </span><span class="s1">sing: Unit = println(</span><span class="s3">&quot;Sing&quot;</span><span class="s1">) 
+ 
+</span><span class="s0">case class </span><span class="s1">Person(Name: String, IsActive: Boolean) 
+ 
+ 
+x </span><span class="s0">match </span><span class="s1">{ 
+  </span><span class="s0">case </span><span class="s1">Some(test) =&gt; println(test) 
+  </span><span class="s0">case </span><span class="s1">_ =&gt; println(</span><span class="s3">&quot;Something&quot;</span><span class="s1">) 
+}</span></pre>
+</body>
+</html>
