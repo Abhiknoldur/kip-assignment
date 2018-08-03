@@ -1,0 +1,5 @@
+[0m[[0minfo[0m] [0m[32mRouterSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mA Router actor[0m[0m
+[0m[[0minfo[0m] [0m[32m- must route the tweets (with friends count less than 500) correctly[0m[0m
+[0m[[0minfo[0m] [0m[32m- must route the tweets processed so far correctly[0m[0m
+[0m[[0minfo[0m] [0m[32m- must handle the condition of terminated routee[0m[0m

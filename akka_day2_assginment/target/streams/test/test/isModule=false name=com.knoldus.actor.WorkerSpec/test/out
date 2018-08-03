@@ -1,0 +1,6 @@
+[0m[[0minfo[0m] [0m[32mWorkerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mA Worker actor[0m[0m
+[0m[[0minfo[0m] [0m[32m- must process the tweets (with friends count less than 500) correctly[0m[0m
+[0m[[0minfo[0m] [0m[32m- must process the tweets (with friends count greater than 500) correctly[0m[0m
+[0m[[0minfo[0m] [0m[32m- must report the tweets processed so far correctly[0m[0m
+[0m[[0minfo[0m] [0m[32m- must report the error if invalid message is sent correctly[0m[0m
