@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/employee.iml" filepath="$PROJECT_DIR$/.idea/modules/employee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Employee.iml" filepath="$PROJECT_DIR$/.idea/Employee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/db.iml" filepath="$PROJECT_DIR$/.idea/modules/db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/db-build.iml" filepath="$PROJECT_DIR$/.idea/modules/db-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dto.iml" filepath="$PROJECT_DIR$/.idea/modules/dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dto-build.iml" filepath="$PROJECT_DIR$/.idea/modules/dto-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/root-build.iml" filepath="$PROJECT_DIR$/.idea/modules/root-build.iml" />
     </modules>
   </component>
 </project>
