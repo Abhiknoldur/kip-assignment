@@ -1,10 +1,10 @@
 package com.knoldus.Problem5;
 
 class Movie {
-  public  String name;
-  public  int realeseYear;
-  public  int rating;
-  public  String genre;
+    String name;
+    int realeseYear;
+    int rating;
+    String genre;
 
     Movie(String name, int realeseYear, int rating, String genre) {
         this.name = name;
