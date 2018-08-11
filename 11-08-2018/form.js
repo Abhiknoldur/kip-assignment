@@ -1,7 +1,3 @@
-function validateForm()
-{
-	
-}
 function ajax_function()
 {
 	form_data = document.forms["signupForm"];
