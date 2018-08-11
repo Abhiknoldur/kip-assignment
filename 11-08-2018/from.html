@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation </title>
+	 <meta charset="utf-8"/>
+	
+   
+     	 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+ <script src="form.js"></script>
+<style>
+	img{
+		margin-left: 70%;
+	}
+</style>
+</head>
+
+
+
+<body>
+	<div>
+	<H1 style="color: red;
+text-align: center	">Welcom To Signup Process...</H1>
+<form  name="signupForm" onsubmit="return ajax_function()" method="get">
+<p>First Name :<br><input id="first_name" type="text" name="fname" placeholder="First Name"></p><br>
+
+<p>Enter Last Name : &nbsp;&nbsp;<br><input type="text" id="last_name" name="lname" placeholder="Last Name"></p><br>
+<img id="avatar" src="thumb-350-481903.png";>
+<p>
+	Email : <br><input type="email" name="email" placeholder="eg:xyz@gmail.com">
+</p><br>
+<p>Confirm Email :<br><input type="text" name="confirm" placeholder="Same as above"></p><br>
+<p>Gender : <br>
+	<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Male"> Female</p>
+<p>Phone :<br><input type="number" name="phone" placeholder="98XXXXXXXX"></p><br><br>
+<p>
+<input type="button" value="Submit" onclick="ajax_function()"></p><br>
+</form>
+
+
+</body>
+</html>
