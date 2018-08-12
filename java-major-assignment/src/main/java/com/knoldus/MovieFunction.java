@@ -12,58 +12,68 @@ public class MovieFunction {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("***********Welcome to Movie Application*************");
+        try {
 
-        while (true) {
-            System.out.println("Choose below Option:");
-            System.out.println("1.To Add movies " +
-                    "\n2.To Get a Movie " +
-                    "\n3.Get List Of Movies " +
-                    "\n4.To delete a movie" +
-                    "\n5.To Update a movie " +
-                    "\n6.To Limit number of function of movies with an offset" +
-                    "\n7.Get Movie based on the rating i.e movie with rating greater than 8 and director name " +
-                    "\n8.Get Movie on the basis of Director" +
-                    "\n9.Get a list movies where releaseyear lies between startYear and endYear" +
-                    "\n10.Get a list movies where releaseDate lies between startDate and endDate");
+            while (true) {
+                System.out.println("Choose below Option:");
+                System.out.println("1.To Add movies " +
+                        "\n2.To Get a Movie " +
+                        "\n3.Get List Of Movies " +
+                        "\n4.To delete a movie" +
+                        "\n5.To Update a movie " +
+                        "\n6.To Limit number of function of movies with an offset" +
+                        "\n7.Get Movie based on the rating i.e movie with rating greater than 8 and director name " +
+                        "\n8.Get Movie on the basis of Director" +
+                        "\n9.Get a list movies where releaseyear lies between startYear and endYear" +
+                        "\n10.Get a list movies where releaseDate lies between startDate and endDate");
 
-            int choice = sc.nextInt();
-            switch (choice) {
-                case 1:
-                    addMovies();
-                    break;
-                case 2:
-                    getMovie();
-                    break;
-                case 3:
-                    getList();
-                    break;
-                case 4:
-                    removeMovie();
-                    break;
-                case 5:
-                    updateMovie();
-                    break;
-                case 6:
-                    getonRating();
-                    break;
-                case 7:
-                    getOnDirector();
-                    break;
-                case 8:
-                    getonReleasedate();
-                    break;
-                case 9:
-                    getonReleaseyearbetwen();
-                    break;
-                case 10:
-                    getonReleasedatebetween();
-                    break;
-                default:
-                    System.exit(0);
+                int choice = sc.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        addMovies();
+                        break;
+                    case 2:
+                        getMovie();
+                        break;
+                    case 3:
+                        getList();
+                        break;
+                    case 4:
+                        removeMovie();
+                        break;
+                    case 5:
+                        updateMovie();
+                        break;
+                    case 6:
+                        getonRating();
+                        break;
+                    case 7:
+                        getOnDirector();
+                        break;
+                    case 8:
+                        getonReleasedate();
+                        break;
+                    case 9:
+                        getonReleaseyearbetwen();
+                        break;
+                    case 10:
+                        getonReleasedatebetween();
+                        break;
+                    default:
+                        throw new MovieNotFound("Your queried Movie is not Found.......");
+                }
+
             }
+
+        }
+        catch (MovieNotFound ex){
+            System.out.println(ex.getMessage());
         }
 
     }
+
+
 
     public static void addMovies() {
         Scanner sc = new Scanner(System.in);
