@@ -3,8 +3,10 @@ package com.knoldus;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class MovieFunction {
     static List<Movie> movieList = new ArrayList<>();
@@ -13,7 +15,6 @@ public class MovieFunction {
         Scanner sc = new Scanner(System.in);
         System.out.println("***********Welcome to Movie Application*************");
         try {
-
             while (true) {
                 System.out.println("Choose below Option:");
                 System.out.println("1.To Add movies " +
@@ -23,57 +24,65 @@ public class MovieFunction {
                         "\n5.To Update a movie " +
                         "\n6.To Limit number of function of movies with an offset" +
                         "\n7.Get Movie based on the rating i.e movie with rating greater than 8 and director name " +
-                        "\n8.Get Movie on the basis of Director" +
-                        "\n9.Get a list movies where releaseyear lies between startYear and endYear" +
-                        "\n10.Get a list movies where releaseDate lies between startDate and endDate");
-
+                        "\n9.Get Movie on the basis of Director" +
+                        "\n10.a list movies where release date is greater than the date passed." +
+                        "\n11.Get a list movies where releaseyear lies between startYear and endYear" +
+                        "\n12.Get a list movies where releaseDate lies between startDate and endDate" +
+                        "\nNow Enter Your Choice------------->");
                 int choice = sc.nextInt();
-
                 switch (choice) {
                     case 1:
                         addMovies();
+                        System.out.println("Movie added Successfully...");
                         break;
                     case 2:
                         getMovie();
+                        System.out.println("This is the movie you want...");
                         break;
                     case 3:
                         getList();
+                        System.out.println("Above is the list of movies....");
                         break;
                     case 4:
                         removeMovie();
+                        System.out.println("Movie Deleted Succesfully....");
                         break;
                     case 5:
                         updateMovie();
+                        System.out.println("Movies updated Sucesfully....");
                         break;
                     case 6:
-                        getonRating();
+                        getlimitOnOffset();
+                        System.out.println("Operation completed....");
                         break;
                     case 7:
-                        getOnDirector();
-                        break;
-                    case 8:
-                        getonReleasedate();
+                        getonRating();
+                        System.out.println("Movie based on the rating i.e movie with rating greater than 8 and director name");
                         break;
                     case 9:
-                        getonReleaseyearbetwen();
+                        getOnDirector();
+                        System.out.println("Movie on the basis of Director");
                         break;
                     case 10:
+                        getonReleasedate();
+                        System.out.println("list movies where release date is greater than the date passed");
+                        break;
+                    case 11:
+                        getonReleaseyearbetwen();
+                        System.out.println("list of movies where releaseyear lies between startYear and endYear");
+                        break;
+                    case 12:
                         getonReleasedatebetween();
+                        System.out.println("list movies where releaseDate lies between startDate and endDate");
                         break;
                     default:
                         throw new MovieNotFound("Your queried Movie is not Found.......");
                 }
-
             }
-
-        }
-        catch (MovieNotFound ex){
+        } catch (MovieNotFound ex) {
             System.out.println(ex.getMessage());
         }
-
     }
-
-
 
     public static void addMovies() {
         Scanner sc = new Scanner(System.in);
@@ -100,8 +109,6 @@ public class MovieFunction {
         } else {
             System.out.println("ID should be unique!\n");
         }
-
-
     }
 
     public static void getMovie() {
@@ -113,7 +120,6 @@ public class MovieFunction {
                 .map(m -> m.id + " " + m.name + " " + m.releaseDate + " " + m.releaseYear + " " + m.rating + " " + m.actor + " " + m.director)
                 .collect(Collectors.toList());
         System.out.println(querylist1);
-
     }
 
     public static void getList() {
@@ -142,6 +148,30 @@ public class MovieFunction {
         System.out.println(movieList);
     }
 
+    public static void getlimitOnOffset() {
+        int actualLimit = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the offset");
+        int offset = sc.nextInt();
+        System.out.println("Enter the limit");
+        int limit = sc.nextInt();
+        System.out.println();
+        if (offset > movieList.size() - 1)
+            System.out.println("Offset is greater than the size of Movie List");
+
+        else if (offset + limit > movieList.size())
+            actualLimit = movieList.size();
+
+        else
+            actualLimit = offset + limit;
+
+        List<Movie> querylist6 = IntStream.range(offset, actualLimit)
+                .boxed()
+                .map(i -> movieList.get(i))
+                .collect(Collectors.toList());
+        System.out.println(querylist6);
+    }
+
     public static void getonRating() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Movie to be updated:");
@@ -156,10 +186,9 @@ public class MovieFunction {
     public static void getOnDirector() {
         Scanner sc = new Scanner(System.in);
         String director = sc.next();
-//        Map<String, String> queryMap = movieList.stream()
-//                .filter(d -> d.director.equals(director))
-//                .map(m -> m.director.)
-//                .collect(Collectors.toMap(e->));
+        Map<String, Long> queryMap = movieList.stream()
+                .collect(Collectors.groupingBy(Movie::getDirector, Collectors.counting()));
+        System.out.println(queryMap);
     }
 
     public static void getonReleasedate() {
@@ -183,7 +212,6 @@ public class MovieFunction {
                 .map(m -> m.id + " " + m.name + " " + m.releaseDate + " " + m.releaseYear + " " + m.rating + " " + m.actor + " " + m.director)
                 .collect(Collectors.toList());
         System.out.println(querylist10);
-
     }
 
     public static void getonReleasedatebetween() {
@@ -197,7 +225,5 @@ public class MovieFunction {
                 .map(m -> m.id + " " + m.name + " " + m.releaseDate + " " + m.releaseYear + " " + m.rating + " " + m.actor + " " + m.director)
                 .collect(Collectors.toList());
         System.out.println(querylist11);
-
     }
-
 }
