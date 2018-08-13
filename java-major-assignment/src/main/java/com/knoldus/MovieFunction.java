@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -28,6 +29,7 @@ public class MovieFunction {
                         "\n10.a list movies where release date is greater than the date passed." +
                         "\n11.Get a list movies where releaseyear lies between startYear and endYear" +
                         "\n12.Get a list movies where releaseDate lies between startDate and endDate" +
+                        "\n13. To exit from the Application" +
                         "\nNow Enter Your Choice------------->");
                 int choice = sc.nextInt();
                 switch (choice) {
@@ -75,8 +77,12 @@ public class MovieFunction {
                         getonReleasedatebetween();
                         System.out.println("list movies where releaseDate lies between startDate and endDate");
                         break;
+                    case 13:
+                        System.exit(0);
+                        break;
                     default:
                         throw new MovieNotFound("Your queried Movie is not Found.......");
+
                 }
             }
         } catch (MovieNotFound ex) {
@@ -115,11 +121,11 @@ public class MovieFunction {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter name of the movie you want to get");
         String queryMovie = sc.next();
-        List<String> querylist1 = movieList.stream()
+        CompletableFuture<List<String>> querylist1 = CompletableFuture.supplyAsync(() ->movieList.stream()
                 .filter(m -> m.name.equals(queryMovie))
                 .map(m -> m.id + " " + m.name + " " + m.releaseDate + " " + m.releaseYear + " " + m.rating + " " + m.actor + " " + m.director)
-                .collect(Collectors.toList());
-        System.out.println(querylist1);
+                .collect(Collectors.toList()));
+        System.out.println(querylist1.join());
     }
 
     public static void getList() {
@@ -165,40 +171,40 @@ public class MovieFunction {
         else
             actualLimit = offset + limit;
 
-        List<Movie> querylist6 = IntStream.range(offset, actualLimit)
+        CompletableFuture<List<Movie>> querylist6 =CompletableFuture.supplyAsync(() -> IntStream.range(offset, actualLimit)
                 .boxed()
                 .map(i -> movieList.get(i))
-                .collect(Collectors.toList());
-        System.out.println(querylist6);
+                .collect(Collectors.toList()));
+        System.out.println(querylist6.join());
     }
 
     public static void getonRating() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Movie to be updated:");
         String dirctor = sc.next();
-        List<String> querylist7 = movieList.stream()
+        CompletableFuture<List<String>> querylist7 = CompletableFuture.supplyAsync(() ->movieList.stream()
                 .filter(m -> m.rating > 8 && m.director.equals(dirctor))
                 .map(m -> m.id + " " + m.name + " " + m.releaseDate + " " + m.releaseYear + " " + m.rating + " " + m.actor + " " + m.director)
-                .collect(Collectors.toList());
-        System.out.println(querylist7);
+                .collect(Collectors.toList()));
+        System.out.println(querylist7.join());
     }
 
     public static void getOnDirector() {
         Scanner sc = new Scanner(System.in);
         String director = sc.next();
-        Map<String, Long> queryMap = movieList.stream()
-                .collect(Collectors.groupingBy(Movie::getDirector, Collectors.counting()));
-        System.out.println(queryMap);
+        CompletableFuture<Map<String, Long>> queryMap = CompletableFuture.supplyAsync(() ->movieList.stream()
+                .collect(Collectors.groupingBy(Movie::getDirector, Collectors.counting())));
+        System.out.println(queryMap.join());
     }
 
     public static void getonReleasedate() {
         int passedDate = LocalDate.now().getDayOfMonth();
 
-        List<String> querylist9 = movieList.stream()
+        CompletableFuture<List<String>> querylist9 = CompletableFuture.supplyAsync(() ->movieList.stream()
                 .filter(m -> m.releaseDate < passedDate)
                 .map(m -> m.id + " " + m.name + " " + m.releaseDate + " " + m.releaseYear + " " + m.rating + " " + m.actor + " " + m.director)
-                .collect(Collectors.toList());
-        System.out.println(querylist9);
+                .collect(Collectors.toList()));
+        System.out.println(querylist9.join());
     }
 
     public static void getonReleaseyearbetwen() {
@@ -207,11 +213,11 @@ public class MovieFunction {
         int startYear = sc.nextInt();
         System.out.println("Enter End year:");
         int endYear = sc.nextInt();
-        List<String> querylist10 = movieList.stream()
+        CompletableFuture<List<String>> querylist10 = CompletableFuture.supplyAsync(() ->movieList.stream()
                 .filter(m -> m.releaseYear >= startYear && m.releaseYear <= endYear)
                 .map(m -> m.id + " " + m.name + " " + m.releaseDate + " " + m.releaseYear + " " + m.rating + " " + m.actor + " " + m.director)
-                .collect(Collectors.toList());
-        System.out.println(querylist10);
+                .collect(Collectors.toList()));
+        System.out.println(querylist10.join());
     }
 
     public static void getonReleasedatebetween() {
@@ -220,10 +226,10 @@ public class MovieFunction {
         int startDate = sc.nextInt();
         System.out.println("Enter End date:");
         int endDate = sc.nextInt();
-        List<String> querylist11 = movieList.stream()
+        CompletableFuture<List<String>> querylist11 = CompletableFuture.supplyAsync(() ->movieList.stream()
                 .filter(m -> m.releaseDate >= startDate && m.releaseYear <= endDate)
                 .map(m -> m.id + " " + m.name + " " + m.releaseDate + " " + m.releaseYear + " " + m.rating + " " + m.actor + " " + m.director)
-                .collect(Collectors.toList());
-        System.out.println(querylist11);
+                .collect(Collectors.toList()));
+        System.out.println(querylist11.join());
     }
 }
