@@ -11,7 +11,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return String.format(id+" "+name+" "+ " "+releaseDate+" "+releaseYear+" "+rating+" "+actor+" "+director);
+        return String.format(id + " " + name + " " + " " + releaseDate + " " + releaseYear + " " + rating + " " + actor + " " + director);
     }
 
 
@@ -25,29 +25,7 @@ public class Movie {
         this.director = director;
     }
 
-    public Long getId() {
-        return this.id;
-    }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public Integer getReleaseDate() {
-        return this.releaseDate;
-    }
-
-    public Integer getReleaseYear() {
-        return this.releaseYear;
-    }
-
-    public Integer getRating() {
-        return this.rating;
-    }
-
-    public String getActor() {
-        return this.actor;
-    }
 
     public String getDirector() {
         return this.director;
