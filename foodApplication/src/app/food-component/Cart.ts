@@ -1,4 +1,4 @@
-export class Mycart {
+export class Cart {
 
   item: string;
   quantity: number;

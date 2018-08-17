@@ -1,69 +1,32 @@
-<!--
-
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <p>ALL</p>
-      <div *ngFor="let name of category">
-        {{name.toString()}}
-      </div>
-      <div>
-      </div>
-    </div>
-
-
-    <div class="col-md-3">
-      <div class="col-md-3">
-    <div *ngFor="let value of alldata | mypipe:'category'">
-        {{value.value |  json}}
-
-    </div>
-
-
-      <div *ngFor="let value of availableTime">
-        {{value.toString()}}
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div *ngFor="let value of price">
-        {{value.toString()}}
-      </div>
-    </div>
-
-    </div>
-    </div>
-    </div>
-
--->
-
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <br><br><br>
 <div class="container">
-  <div class="row" >
-    <div class="col-md-3 " align="center">
+  <div class="row">
+    <div class="col-md-3 " align="left">
       <div class="panel panel-default">
-        <div class="panel-heading"><strong>Category</strong></div>
+        <div class="panel-heading" style="background-color:yellow"><strong>Category</strong></div>
         <div class="panel-body">
           <div *ngFor="let name of alldata | mypipe:'category'">
-            <p>{{name.key}}</p>
+            <p><a href="#">{{name.key}}</a></p>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-6  panel panel-default" align="center">
-
+    <div class="col-md-6  panel panel-default" align="left">
       <div *ngFor="let name of alldata | mypipe:'category'">
         <div class="panel panel-default">
-          <div class="panel-heading"><strong>{{name.key}}</strong></div>
+          <div class="panel-heading " style="background-color:yellow"><strong>{{name.key}}</strong></div>
           <div class="panel-body">
-            <div *ngFor="let item of name.value">
-              <p>{{item.name}} <span class="glyphicon glyphicon-plus" style="margin: 5px" (click)="addItem(item.name,item.price,1)"></span> <span style="margin: 5px" class="glyphicon glyphicon-minus" (click)="subItem(item.name,item.price,1)"></span></p>
+            <div scope="col" colspan="4" *ngFor="let item of name.value">
+              <span *ngIf="item.vegflag=='veg'"><i class="fa fa-square" style="font-size:10px;color:green;"></i></span>
+              <span *ngIf="item.vegflag == 'nonveg'"><i class="fa fa-square"
+                                                        style="font-size:10px;color:red"></i></span> &nbsp;&nbsp;
+              {{item.name}}
+              {{item.availabletime}}
+              <span class="fa fa-plus-square-o" style="margin: 5px;" (click)="addItem(item.name,item.price,1)"></span>
+              <span style="margin: 5px" class="fa fa-minus-square-o" (click)="subItem(item.name,item.price,1)"></span>
+              <div align="right"> &#x20B9;{{item.price}}</div>
             </div>
           </div>
         </div>
@@ -71,15 +34,28 @@
     </div>
     <div class="col-md-3">
       <div class="panel panel-default">
-        <div class="panel-heading"><strong>Cart</strong></div>
+        <div class="panel-heading" style="background-color:yellow"><span><strong>Cart                                                                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </strong></span>
+          <span class="glyphicon glyphicon-trash"></span></div>
         <div class="panel-body">
-          <div *ngFor ="let name of cart">
-            <span><strong>{{name.item}}</strong></span>&nbsp;
-            <span><strong>{{name.price}}</strong></span>&nbsp;
-            <span><strong>{{name.quantity}}</strong></span>
+          <div *ngFor="let name of cart">
+            <div class="col-md-4">
+              <span><strong>{{name.item}}</strong></span>&nbsp;
+            </div>
+            <div class="col-md-4"> X
+              <span><strong>{{name.quantity}}</strong></span>&nbsp;
+            </div>
+            <div class="col-md-4">
+              <span><strong>&#x20B9;
+                {{name.price}}</strong></span>
+            </div>
           </div>
         </div>
-        <div class="panel-footer">Total Amount = {{totalamount}}</div>
+        <div class="panel-footer"> Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &#x20B9;{{totalamount}}
+        </div>
+        <div class="text-center" style="background-color:yellow">Checkout</div>
       </div>
     </div>
   </div>

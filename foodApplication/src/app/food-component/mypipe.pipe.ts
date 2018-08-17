@@ -23,3 +23,4 @@ export class MypipePipe implements PipeTransform {
 
     return Object.keys(groupedCollection).map(key => ({key, value: groupedCollection[key]}));
   }
+}

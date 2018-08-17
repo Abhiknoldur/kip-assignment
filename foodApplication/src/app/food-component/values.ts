@@ -1,5 +1,5 @@
 export interface Config {
-  availableTime: string;
+  availabletime: string;
   category: string;
   description: string;
   name: string;
