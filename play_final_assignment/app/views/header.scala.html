@@ -1,0 +1,34 @@
+@(implicit requestHeader:RequestHeader)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="@routes.Assets.versioned("vendor/bootstrap/css/bootstrap.min.css")">
+
+    <script src="@routes.Assets.versioned("vendor/jquery/jquery-3.2.1.min.js")"></script>
+    <script src="@routes.Assets.versioned("vendor/bootstrap/js/popper.js")"></script>
+    <script src="@routes.Assets.versioned("vendor/bootstrap/js/bootstrap.min.js")"></script>
+    <script src="@routes.Assets.versioned("vendor/select2/select2.min.js")"></script>
+    <script src="@routes.Assets.versioned("javascripts/main.js")"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="@routes.HomeController.profile">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="@routes.HomeController.ViewAssignment">View assignment</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="@routes.HomeController.viewUser">View User</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="@routes.HomeController.AddAssignment">Add Assignmnet</a>
+        </li>
+    </ul>
+</nav>
+
