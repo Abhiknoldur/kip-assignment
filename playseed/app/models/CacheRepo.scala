@@ -29,6 +29,11 @@ trait Impl{
     }
   }
 
+  def getAll: Future[Seq[UserRepo]] = {
+    db.run {
+      userProfileQuery.result
+    }
+  }
 }
 
 trait UserTable extends HasDatabaseConfigProvider[JdbcProfile] {

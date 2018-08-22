@@ -1,10 +1,9 @@
 package controllers
 
 
-import akka.Done
 import form.{AssignmentForm, SignInForm, UserForm}
 import javax.inject.Inject
-import models.{AssignmentRepo, CacheRepo, UserRepo, assignmentRepo}
+import models.{AssignmentRepo, CacheRepo, UserRepo, NewAssignmentRepo}
 import play.api.mvc._
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -15,7 +14,7 @@ class HomeController @Inject()(cc: ControllerComponents,
                                assignmentForm: AssignmentForm,
                                cacheRepo: CacheRepo,
                                signInForm:SignInForm,
-                               assignmentRep: assignmentRepo) extends AbstractController(cc) {
+                               assignmentRep: NewAssignmentRepo) extends AbstractController(cc) {
 
   def index(): Action[AnyContent]  = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.index())
@@ -49,8 +48,10 @@ class HomeController @Inject()(cc: ControllerComponents,
     }
   }
 
-  def viewUser(): Action[AnyContent]  = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.viewUser())
+  def viewUser(): Action[AnyContent]  = Action.async { implicit request: Request[AnyContent] =>
+    cacheRepo.getAll.map { data =>
+      Ok(views.html.viewUser(data))
+    }
   }
 
 
@@ -63,7 +64,7 @@ class HomeController @Inject()(cc: ControllerComponents,
       data => {
         cacheRepo.get(data.userName).flatMap { optionalUser =>
           optionalUser.fold {
-            val dbPayload: UserRepo = UserRepo(0, data.fName, data.mName, data.lName, data.userName, data.password, data.mobile, data.age, data.gender, data.Hobbies)
+            val dbPayload: UserRepo = UserRepo(0, data.fName, data.mName, data.lName, data.userName, data.password.password, data.mobile, data.age, data.gender, data.Hobbies)
             cacheRepo.store(dbPayload).map { _ =>
               Redirect(routes.HomeController.profile())
 

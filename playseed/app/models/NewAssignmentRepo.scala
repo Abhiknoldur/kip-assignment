@@ -10,7 +10,7 @@ import scala.concurrent.Future
 case class AssignmentRepo(id: Long, title: String, Details: String)
 
 
-class assignmentRepo @Inject()(protected val dbConfigProvider: DatabaseConfigProvider) extends Impl1 with AssignmentTable
+class NewAssignmentRepo @Inject()(protected val dbConfigProvider: DatabaseConfigProvider) extends Impl1 with AssignmentTable
 
 trait Impl1 {
   self: AssignmentTable =>
