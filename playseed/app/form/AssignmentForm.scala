@@ -1,9 +1,9 @@
 package form
+
 import play.api.data.Form
-import play.api.data.Forms.{mapping, number, text}
+import play.api.data.Forms.{mapping, text}
 
-case class Assignment(title :String,Details: String)
-
+case class Assignment(title: String, Details: String)
 
 class AssignmentForm {
 
@@ -11,7 +11,6 @@ class AssignmentForm {
     mapping(
       "title" -> text,
       "Details" -> text
-
 
     )(Assignment.apply)(Assignment.unapply)
   )
