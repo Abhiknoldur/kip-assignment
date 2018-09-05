@@ -25,6 +25,6 @@ abstract class UserApplication(context: LagomApplicationContext)
   extends LagomApplication(context) with AhcWSComponents {
 
   // Bind the service that this server provides
-  override lazy val lagomServer = serverFor[UserService](wire[UserServiceImpl])
+  override lazy val lagomServer: LagomServer = serverFor[UserService](wire[UserServiceImpl])
 
 }
