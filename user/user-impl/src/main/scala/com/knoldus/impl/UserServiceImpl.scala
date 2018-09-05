@@ -1,8 +1,6 @@
 package com.knoldus.impl
 
-import akka.{Done, NotUsed}
-import com.google.common.util.concurrent.Futures.FutureCombiner
-import com.knoldus.api
+import akka.NotUsed
 import com.knoldus.api.{User, UserData, UserService}
 import com.lightbend.lagom.scaladsl.api.ServiceCall
 
@@ -38,14 +36,14 @@ class UserServiceImpl extends UserService {
       val existingUser = UserData.userBuffer.find(user => user.id == id).get
       UserData.userBuffer -= existingUser
       UserData.userBuffer += User(existingUser.id ,newName)
-      Future.successful("Name is Updated");
+      Future.successful("Name is Updated")
     } else {
       Future.successful("User can not be found")
     }
   }
   }
 
-  override def deleteUser(id: Int): ServiceCall[NotUsed, String] =  ServiceCall { _=> {
+  override def deleteUser(id: Int): ServiceCall[NotUsed, String] =  ServiceCall { _ => {
     if(isUserExist(id)){
       UserData.userBuffer -= UserData.userBuffer.find(user=> user.id == id).get
       Future.successful("Deleted")
@@ -56,7 +54,7 @@ class UserServiceImpl extends UserService {
   }
 
 
-  override def showUser(): ServiceCall[NotUsed, UserData] = { - =>
+  override def showUser(): ServiceCall[NotUsed, UserData] = { _ =>
     Future.successful(UserData(UserData.userBuffer))
   }
 
