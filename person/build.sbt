@@ -44,4 +44,4 @@ lazy val `person-impl` = (project in file("person-impl"))
   .dependsOn(`person-api`)
 
 //Define the external service’s host and port name.
-lagomUnmanagedServices in ThisBuild := Map("external-service" -> "https://jsonplaceholder.typicode.com")
+lagomUnmanagedServices in ThisBuild := Map("external-service" -> "https://gist.githubusercontent.com")

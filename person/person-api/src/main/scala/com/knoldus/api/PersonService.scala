@@ -18,7 +18,7 @@ trait PersonService extends Service {
     named("welcome")
       .withCalls(
         pathCall("/api/person/:name", Person _),
-        pathCall("/consume/user", consumeUser _)
+        pathCall("/consume/guest", consumeUser _)
       )
       .withAutoAcl(true)
     // @formatter:on
